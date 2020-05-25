@@ -4,3 +4,8 @@ jspm_packages
 
 # Serverless directories
 .serverless
+.idea
+
+website/.cache
+website/.serverless
+website/node_modules
