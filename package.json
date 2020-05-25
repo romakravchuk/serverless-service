@@ -11,7 +11,8 @@
     "node-style-loader": "0.0.1-alpha",
     "react": "16.9.0",
     "react-chartjs-2": "2.9.0",
-    "react-dom": "16.9.0"
+    "react-dom": "16.9.0",
+    "serverless-webpack": "^5.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

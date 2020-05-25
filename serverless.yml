@@ -12,8 +12,13 @@
 # Happy Coding!
 service: my-first-service
 # app and org for use with dashboard.serverless.com
-app: my-first-app
+app: serverless-demo
 org: roman4ik
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-finch
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -118,3 +123,8 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+
+custom:
+  webpack: "./webpack.config.lambda.js"
+  client:
+    bucketName: lambda-react-demo
