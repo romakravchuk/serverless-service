@@ -1,25 +1,18 @@
-"use strict";
-const { tagEvent } = require("./serverless_sdk");
+import render from './renderer';
 
-module.exports.hello = async event => {
-  tagEvent("custom-tag", "hello world", { custom: { tag: "data" } });
-
+const createResponse = (html) => {
   return {
     statusCode: 200,
     headers: {
-      "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-      "Access-Control-Allow-Credentials": true // Required for cookies, authorization headers with HTTPS
+      "Content-Type": "text/html; charset=utf-8"
     },
-    body: JSON.stringify(
-      {
-        message: "Go Serverless v1.0! Your function executed successfully!",
-        input: event
-      },
-      null,
-      2
-    )
+    body: html
   };
+};
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
+// eslint-disable-next-line import/prefer-default-export
+export const renderPage = (event, context, cb) => {
+  render()
+    .then((html) => cb(null, createResponse(html)))
+    .catch(e => cb(e));
 };
