@@ -1,7 +1,4 @@
 @font-face {
-  font-family: 'serverless';
-  src: url('./fonts/serverless-regular.woff2') format('woff2'),
-    url('./fonts/serverless-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,9 +13,8 @@ div {
   width: 100%;
   margin: 0;
   padding: 0;
-  line-height: normal;
   background: var(--mainBg);
-  font-family: 'serverless', 'HelveticaNeue-Regular', 'Helvetica Neue Regular', 'Helvetica Neue',
+  font-family: 'HelveticaNeue-Regular', 'Helvetica Neue Regular', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-weight: 300;
   font-size: 14px;

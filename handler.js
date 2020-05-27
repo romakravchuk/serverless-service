@@ -10,9 +10,10 @@ const createResponse = (html) => {
   };
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export const renderPage = (event, context, cb) => {
   render()
-    .then((html) => cb(null, createResponse(html)))
-    .catch(e => cb(e));
-};
+      .then((html) => {
+        return cb(null, createResponse(html));
+      })
+      .catch(e => cb(e));
+}

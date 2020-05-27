@@ -15,14 +15,14 @@ service: my-first-service
 app: serverless-demo
 org: roman4ik
 
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
 plugins:
   - serverless-webpack
   - serverless-offline
   - serverless-finch
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
 
 provider:
   name: aws
@@ -65,8 +65,10 @@ outputs:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
+  renderPage:
     handler: handler.renderPage
+    environment:
+      NODE_ENV: 'AWS'
     events:
       - http:
           path: hello
@@ -125,6 +127,9 @@ functions:
 #       Value: "Some output value"
 
 custom:
-  webpack: "./webpack.config.lambda.js"
+  webpack:
+    webpackConfig: "./webpack.config.lambda.js"
+    packager: 'npm'
   client:
-    bucketName: lambda-react-demo
+    bucketName: static-serverless-demo
+    distributionFolder: ./dist

@@ -6,7 +6,5 @@ jspm_packages
 .serverless
 .idea
 .env
-
-website/.cache
-website/.serverless
-website/node_modules
+.webpack
+.cache
