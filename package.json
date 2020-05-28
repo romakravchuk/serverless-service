@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "lambda": "sls offline --port 8000 start",
+    "lambda": "sls offline --p 8000",
     "sls_deploy": "sls deploy",
     "sls_client_deploy": "sls client deploy"
   },

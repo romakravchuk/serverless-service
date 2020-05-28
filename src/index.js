@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import AppChart from './AppChart';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppChart />, document.getElementById('root'));
