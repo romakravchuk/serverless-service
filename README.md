@@ -1,4 +1,5 @@
-Raw example of serverside rendering with help of AWS lambda
+Raw example of serverside rendering with help of AWS lambda.
+
 This project was bootstrapped with [Serverless framework](https://github.com/serverless)
 
 ## Available Scripts
